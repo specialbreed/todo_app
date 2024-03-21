@@ -65,7 +65,72 @@ class _HomePageState extends State<HomePage>{
       title: Text('TO DO'),
       centerTitle: true,
       elevation: 0,
+
     ) ,
+      drawer: Drawer(
+        child: Container(
+          color: Colors.yellow.shade200,
+          child: ListView(
+            children: [
+             ListTile(
+               leading: Icon(Icons.file_upload),
+               title: Text('Upload shot'),
+               onTap: () => print('Upload tapped'),
+             ),
+              SizedBox(height: 20),
+
+              ListTile(
+                leading: Icon(Icons.account_circle),
+                title: Text('Profile tapped'),
+                onTap: () => print('Profile tapped'),
+              ),
+              SizedBox(height: 20),
+
+              ListTile(
+                leading: Icon(Icons.message),
+                title: Text('Messages'),
+                onTap: () => print('Message tapped'),
+              ),
+              SizedBox(height: 20),
+
+              ListTile(
+                leading: Icon(Icons.line_axis),
+                title: Text('Stats'),
+                onTap: () => print('Stats tapped'),
+              ),
+              SizedBox(height: 20),
+
+              ListTile(
+                leading: Icon(Icons.share),
+                title: Text('Share'),
+                onTap: () => print('Share tapped'),
+              ),
+              SizedBox(height: 20),
+
+              ListTile(
+                leading: Icon(Icons.notifications),
+                title: Text('Notifications'),
+                onTap: () => print('Notification tapped'),
+              ),
+              SizedBox(height: 20),
+
+              ListTile(
+                leading: Icon(Icons.settings),
+                title: Text('Setting'),
+                onTap: () => print('Setting tapped'),
+              ),
+              SizedBox(height: 20),
+
+              ListTile(
+                leading: Icon(Icons.logout),
+                title: Text('Sign Out'),
+                onTap: () => print('Logout tapped'),
+              ),
+              SizedBox(height: 20),
+            ],
+          ),
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: createNewTask,
         child: Icon(Icons.add),
